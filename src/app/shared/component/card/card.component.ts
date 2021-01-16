@@ -8,7 +8,7 @@ import { Card } from '../../interfaces';
 })
 export class CardComponent implements OnInit {
 
-  public data:Card;
+
   constructor() { }
 
   ngOnInit(): void {
