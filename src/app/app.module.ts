@@ -10,6 +10,8 @@ import { AboutComponent } from './pages/about/about.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { CardComponent } from './shared/component/card/card.component';
 import { BoxListComponent } from './shared/component/box-list/box-list.component';
+import {HttpService, StudentService, TeacherService, UrlService} from "./common/services";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,13 +23,14 @@ import { BoxListComponent } from './shared/component/box-list/box-list.component
     NotFoundComponent,
     CardComponent,
     BoxListComponent,
-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  // All services are need to store on main module provider folders
+  providers: [ HttpService, UrlService, StudentService, TeacherService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

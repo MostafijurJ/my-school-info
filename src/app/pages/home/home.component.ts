@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Card} from "../../shared/interfaces";
+import {StudentService, TeacherService} from "../../common/services";
 
 @Component({
   selector: 'app-home',
@@ -8,36 +9,38 @@ import {Card} from "../../shared/interfaces";
 })
 export class HomeComponent implements OnInit {
 
-  public studentTitle:string="Student List";
-  public teacherTitle:string="Teacher List";
+  public studentTitle: string = "Student List";
+  public teacherTitle: string = "Teacher List";
 
-  public studentList : Card [] = [];
-  public teacherList : Card [] = [];
+  public studentList: Card [] = [];
+  public teacherList: Card [] = [];
 
-  constructor() {
-    this.studentList =this.getStudentList();
-    this.teacherList = this.getTeacherList();
+  constructor(private studentService: StudentService, private teacherService: TeacherService) {
+    this.setStudentList();
+    this.setTeacherList();
   }
 
   ngOnInit(): void {
   }
 
-  private getStudentList(): Card[] {
+  private setStudentList(): void {
+    this.studentService.getStudentList().then(res => {
+      if(res.serviceResult && res.serviceResult.success ===true){
+        this.studentList = res.data;
+      }else {
+        return console.log("Error"+res);
+      }
+    })
+  }
 
-    let cards: Card[] = [];
-    cards.push({title: 'Alice', counter: 1, frequency: 'week', text: 'you need to work with this'});
-    cards.push({title: 'Bob', counter: 2, frequency: 'week', text: 'you need to work with this'});
-    cards.push({title: 'Jack', counter: 3, frequency: 'week', text: 'you need to work with this'});
-    return cards;
-}
-
-private getTeacherList(): Card[] {
-
-    let cards: Card[] = [];
-    cards.push({title: 'Sanowar Hossain', counter: 1, frequency: 'week', text: 'you need to work with this'});
-    cards.push({title: 'MR. RAHIM', counter: 2, frequency: 'week', text: 'you need to work with this'});
-    cards.push({title: 'Dr. Jahid', counter: 3, frequency: 'week', text: 'you need to work with this'});
-    return cards;
-}
+  private setTeacherList(): void {
+    this.teacherService.getTeacherList().then(res => {
+      if(res.serviceResult && res.serviceResult.success === true){
+        this.teacherList = res.data;
+      }else {
+        return console.log("Error"+res);
+      }
+    })
+  }
 
 }

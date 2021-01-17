@@ -1,0 +1,27 @@
+{
+  "serviceResult": {
+    "success": true,
+    "message": "",
+    "messageTechnical": ""
+  },
+  "data": [
+    {
+      "title": "Alice",
+      "count": 1,
+      "frequency": "HTML",
+      "text": "He likes to play with HTML and CSS."
+    },
+    {
+      "title": "Bob",
+      "count": 2,
+      "frequency": "JS",
+      "text": "He likes to play with JSS"
+    },
+    {
+      "title": "Jack",
+      "count": 3,
+      "frequency": "Angular",
+      "text": "He likes to play with Angular"
+    }
+  ]
+}

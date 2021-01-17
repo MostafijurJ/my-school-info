@@ -1,0 +1,27 @@
+{
+  "serviceResult": {
+    "success": true,
+    "message": "",
+    "messageTechnical": ""
+  },
+  "data": [
+    {
+      "title": "Bob Uncle",
+      "count": 1,
+      "frequency": "Clean Coding",
+      "text": "A great teacher to teach clean coding."
+    },
+    {
+      "title": "John Doe",
+      "count": 2,
+      "frequency": "Design",
+      "text": "He is great at designing"
+    },
+    {
+      "title": "Alex",
+      "count": 3,
+      "frequency": "Https",
+      "text": " Agreat teacher to teach clean coding."
+    }
+  ]
+}
