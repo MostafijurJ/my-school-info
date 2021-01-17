@@ -1,6 +1,6 @@
 export interface Card {
-    title:string;
-    counter:number;
-    frequent:string;
-    body:string;
+  title?: string;
+  counter?: number;
+  frequency?: string;
+  text?: string;
 }

@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "assignment-week-two"
+  "defaultProject": "assignment-week-two",
+  "cli": {
+    "analytics": "cc87ef54-55fe-4d68-b105-ee00835fd88a"
+  }
 }
