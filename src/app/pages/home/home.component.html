@@ -1,22 +1,12 @@
-<main class="container">
-
-    <div class="page-header px-3 py-3 mx-auto text-center">
-       <h1 class="display-4">  Angular Bootcamp-2021 </h1>
-
+<main class="container-fluid">
+  <div class="page-header px-3 py-3 mx-auto text-center">
+    <h1 class="display-4"> Angular Bootcamp-2021 </h1>
     <p class="lead">
-        In this learning Camp2021, we will able to learn about Angular JS. Hopefully this will helpful for us.
+      In this learning Camp 2021, we will able to learn about Angular JS. Hopefully this will helpful for us.
     </p>
-</div>
+  </div>
 
-<div class="card-deck">
-<!--  using loop for displaying multiple cards-->
-    <div class="card shadow-sm mb-4" *ngFor="let card of cardList">
-         <app-card [data]="card"></app-card>
-    </div>
-
-
-</div>
-
-
+  <app-box-list [title]="studentTitle" [cardAtBox]="studentList"></app-box-list>
+  <app-box-list [title]="teacherTitle" [cardAtBox]="teacherList"></app-box-list>
 
 </main>

@@ -1,0 +1,7 @@
+<h3 class="text-center font-weight-normal mt-4"> {{title}} </h3>
+<div class="card-deck">
+  <!--  using loop for displaying multiple cards-->
+  <div class="card shadow-sm mb-4" *ngFor="let card of cardAtBox">
+    <app-card [data]="card"></app-card>
+  </div>
+</div>
