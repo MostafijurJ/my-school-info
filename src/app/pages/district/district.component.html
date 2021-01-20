@@ -1,0 +1,32 @@
+<div class="page-header px-3 py-3 mx-auto text-center">
+  <h1 class="display-7"> District List of Bangladesh </h1>
+</div>
+
+<div class="container-fluid">
+
+  <div class="px-5 py-3 mx-auto text-center">
+    <table class="table table-striped table-bordered">
+      <thead>
+      <tr class="bg-info">
+        <th scope="col">SL</th>
+        <th scope="col">Name</th>
+        <th scope="col">Division</th>
+        <th scope="col">Established</th>
+        <th scope="col">Population</th>
+        <th scope="col">Area(sq.km)</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor=" let district of districtList; let i = index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{district.name}}</td>
+        <td>{{district.division}}</td>
+        <td>{{district.established}}</td>
+        <td>{{district.population}}</td>
+        <td>{{district.areaSqKm}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

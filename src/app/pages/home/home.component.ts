@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   public studentList: Card [] = [];
   public teacherList: Card [] = [];
 
+
   constructor(private studentService: StudentService, private teacherService: TeacherService) {
     this.setStudentList();
     this.setTeacherList();
@@ -25,20 +26,20 @@ export class HomeComponent implements OnInit {
 
   private setStudentList(): void {
     this.studentService.getStudentList().then(res => {
-      if(res.serviceResult && res.serviceResult.success ===true){
+      if (res.serviceResult && res.serviceResult.success === true) {
         this.studentList = res.data;
-      }else {
-        return console.log("Error"+res);
+      } else {
+        return console.log("Error" + res);
       }
     })
   }
 
   private setTeacherList(): void {
     this.teacherService.getTeacherList().then(res => {
-      if(res.serviceResult && res.serviceResult.success === true){
+      if (res.serviceResult && res.serviceResult.success === true) {
         this.teacherList = res.data;
-      }else {
-        return console.log("Error"+res);
+      } else {
+        return console.log("Error" + res);
       }
     })
   }

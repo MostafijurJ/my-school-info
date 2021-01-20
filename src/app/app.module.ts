@@ -12,6 +12,8 @@ import { CardComponent } from './shared/component/card/card.component';
 import { BoxListComponent } from './shared/component/box-list/box-list.component';
 import {HttpService, StudentService, TeacherService, UrlService} from "./common/services";
 import {HttpClientModule} from "@angular/common/http";
+import { DistrictComponent } from './pages/district/district.component';
+import {DistrictService} from "./common/services";
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import {HttpClientModule} from "@angular/common/http";
     NotFoundComponent,
     CardComponent,
     BoxListComponent,
+    DistrictComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,7 @@ import {HttpClientModule} from "@angular/common/http";
     HttpClientModule
   ],
   // All services are need to store on main module provider folders
-  providers: [ HttpService, UrlService, StudentService, TeacherService ],
+  providers: [ HttpService, UrlService, StudentService, TeacherService, DistrictService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
