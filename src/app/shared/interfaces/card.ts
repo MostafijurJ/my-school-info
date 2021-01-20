@@ -3,4 +3,5 @@ export interface Card {
   count?: number;
   frequency?: string;
   text?: string;
+  comment?: string
 }
