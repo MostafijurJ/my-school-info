@@ -5,25 +5,25 @@
 <div class="container-fluid">
 
   <div class="px-5 py-3 mx-auto text-center">
-    <table class="table table-striped table-bordered">
+    <table class="table table-striped table-bordered table-hover">
       <thead>
-      <tr class="bg-info">
-        <th scope="col">SL</th>
-        <th scope="col">Name</th>
-        <th scope="col">Division</th>
-        <th scope="col">Established</th>
-        <th scope="col">Population</th>
-        <th scope="col">Area(sq.km)</th>
+      <tr class="bg-info text-center">
+        <th scope="col" class="text-center">SL</th>
+        <th scope="col" class="text-center">Name</th>
+        <th scope="col" class="text-center">Division</th>
+        <th scope="col" class="text-center">Established</th>
+        <th scope="col" class="text-center">Population</th>
+        <th scope="col" class="text-center">Area(sq.km)</th>
       </tr>
       </thead>
       <tbody>
       <tr *ngFor=" let district of districtList; let i = index">
-        <th scope="row">{{i+1}}</th>
-        <td>{{district.name}}</td>
-        <td>{{district.division}}</td>
-        <td>{{district.established}}</td>
-        <td>{{district.population}}</td>
-        <td>{{district.areaSqKm}}</td>
+        <th scope="row" class="text-center" >{{i + 1}}</th>
+        <td class="text-center" >{{district.name}}</td>
+        <td class="text-center" >{{district.division}}</td>
+        <td class="text-center" >{{district.established}}</td>
+        <td class="text-center" >{{district.population}}</td>
+        <td class="text-center" >{{district.areaSqKm}}</td>
       </tr>
       </tbody>
     </table>
