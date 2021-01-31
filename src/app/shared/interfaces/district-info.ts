@@ -4,4 +4,5 @@ export interface DistrictInfo {
   established : number,
   population : number,
   areaSqKm : number
+  density ?: number;
 }

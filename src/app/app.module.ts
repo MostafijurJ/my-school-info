@@ -14,6 +14,7 @@ import {HttpService, StudentService, TeacherService, UrlService} from "./common/
 import {HttpClientModule} from "@angular/common/http";
 import { DistrictComponent } from './pages/district/district.component';
 import {DistrictService} from "./common/services";
+import { DistrictTableComponent } from './shared/component/district-table/district-table.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {DistrictService} from "./common/services";
     CardComponent,
     BoxListComponent,
     DistrictComponent,
+    DistrictTableComponent,
   ],
   imports: [
     BrowserModule,
