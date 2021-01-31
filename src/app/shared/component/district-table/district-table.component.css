@@ -1,0 +1,10 @@
+.container-fluid{
+  margin-bottom: 80px;
+}
+
+.tdDelete{
+  cursor: pointer;
+}
+.tdDelete i:hover{
+  color: red;
+}

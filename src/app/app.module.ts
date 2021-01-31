@@ -15,6 +15,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { DistrictComponent } from './pages/district/district.component';
 import {DistrictService} from "./common/services";
 import { DistrictTableComponent } from './shared/component/district-table/district-table.component';
+import { BdLocalPipe } from './shared/pipes/bd-local.pipe';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { DistrictTableComponent } from './shared/component/district-table/distri
     BoxListComponent,
     DistrictComponent,
     DistrictTableComponent,
+    BdLocalPipe,
   ],
   imports: [
     BrowserModule,
